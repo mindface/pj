@@ -1,0 +1,249 @@
+/* --- main--contents --- */
+
+.main-img--section {
+    position: relative;
+}
+
+.main-img--text-wrap {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    text-align: center;
+}
+
+.main-img--text {
+    font-weight: bold;
+}
+
+.main-img--text:nth-child(1) {
+    @include font-size(120);
+    color: #fcee21;
+}
+
+.main-img--text:nth-child(2) {
+    @include font-size(40);
+    line-height: 1.6;
+    padding-bottom: 20px;
+    color: #333;
+}
+
+.main-img--text:nth-child(3) {
+    @include font-size(34);
+    color: #333;
+}
+
+.main {
+    padding: 90px 0 0;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    text-transform: uppercase;
+    outline-width: 0;
+    overflow: hidden;
+}
+.content::before, .content::after {
+    content: "";
+    position: fixed;
+    z-index: 50;
+    top: 50vh;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0;
+    border-radius: 50%;
+}
+.content::before {
+    left: -200px;
+    transform: scale(15);
+}
+.content::after {
+    right: -200px;
+    transform: scale(15);
+}
+
+.toppage-section {
+    position: relative;
+    margin-bottom: 200px;
+}
+
+.toppage-section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    bottom: -50px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.toppage-section:nth-child(1)::after {
+    background-image: url(../img/img-section-bg-01.png);
+    background-position: right 0 bottom 0;
+    right: -50px;
+}
+
+.toppage-section:nth-child(2)::after {
+    background-image: url(../img/img-section-bg-02.png);
+    background-position: left 0 bottom 0;
+    left: -50px;
+}
+
+.toppage-section:nth-child(3)::after {
+    background-image: url(../img/img-section-bg-03.png);
+    background-position: right 0 bottom 0;
+    right: -50px;
+}
+
+.l-section--content-wrap::after {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    font-size: 280px;
+    color: #ccc;
+    font-weight: bold;
+    line-height: 0;
+}
+
+.toppage-section:nth-child(1) .l-section--content-wrap::after {
+    content: "01";
+    right: 0;
+}
+
+.toppage-section:nth-child(2) .l-section--content-wrap::after {
+    content: "02";
+    left: 0;
+}
+
+.toppage-section:nth-child(3) .l-section--content-wrap::after {
+    content: "03";
+    right: 0;
+}
+
+.l-section--content-wrap {
+    max-width: $baseWidth;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.l-section--content--img-wrap,
+.l-section--content--text-wrap {
+    flex-basis: 50%;
+    width: 50%;
+}
+
+.l-section--content--info-wrap {
+    position: relative;
+}
+
+.l-section:nth-child(odd) .l-section--content--info-wrap {
+    padding-left: 50px;
+}
+
+.l-section:nth-child(even) .l-section--content--info-wrap {
+    padding-right: 50px;
+}
+
+.l-section--content--img-wrap {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.l-section--content--img-wrap::before,
+.l-section--content--img-wrap::after {
+    top: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+.l-section--content--img-wrap::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/img-section-boxl.png);
+    background-size: 100%;
+    right: 0;
+}
+
+.l-section--content--img-text {
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    bottom: 8%;
+    @include font-size(100);
+    transform: rotate(-20deg);
+    color: #fff;
+    font-weight: bold;
+}
+
+.l-section--content--info-ttl {
+    padding-bottom: 150px;
+    @include font-size(50);
+    font-weight: bold;
+}
+
+.l-section--content--info-ttlsub {
+    padding-top: 25px;
+    display: block;
+    @include font-size(24);
+}
+
+.l-section--content--btn-link {
+    position: relative;
+    display: block;
+    width: 335px;
+    height: 115px;
+    @include font-size(45);
+    font-weight: bold;
+    transition-duration: .3s;
+    text-align: left;
+}
+
+.l-section--content--btn-link:hover .l-section--btn-arrow {
+    border: 20px solid #fcee21;
+    transform: translate3d(10px, 0, 0);
+    transition-duration: .3s;
+}
+
+.l-section--btn-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 115px;
+    height: 115px;
+    border: 10px solid #92e3e6;
+    transition-duration: .3s;
+}
+
+.l-section--btn-arrow span {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 80px;
+    height: 2px;
+    background-color: #29abe2;
+}
+
+.l-section--content--btn-link:hover .l-section--btn-arrow span {
+    transform: translate3d(10px, 0, 0);
+    transition-duration: .5s;
+}
+
+.l-section--btn-arrow span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    right: -4px;
+    width: 30px;
+    height: 2px;
+    background-color: #29abe2;
+    transform: rotate(45deg);
+}

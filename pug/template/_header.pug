@@ -1,0 +1,13 @@
+header.header
+  .header--inner
+    .header--inner--logowrap
+     a(href="/coaching/").header--inner--logoLink
+       h1.header--inner--logo
+        img.header--inner--logoimg(src="assets/img/img-header-logo.png", alt="コーチングロゴ")
+    nav.header--inner--nav
+     ul.header--inner--navList
+      - var list = ["about","contact","service"]
+      each item, index in list
+       li.header--inner--navitem
+        a.header--inner--navlink(href=`${item}.html`)
+         span.header--inner--navsub #{item}

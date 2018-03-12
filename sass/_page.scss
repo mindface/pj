@@ -1,0 +1,436 @@
+/* --- page --- */
+
+.l-section.page-contact {
+    position: relative;
+}
+
+.page .l-section:nth-child(n+2),
+.page .l-section:nth-child(1) .l-section--page-content-wrap {
+    max-width: 780px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.my-service .l-section:nth-child(n+2) {
+    height: 900px;
+}
+
+
+.l-section--page-content-wrap::after {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    @include fontVw(200, 1280);
+    color: #ccc;
+    font-weight: bold;
+    line-height: 0;
+}
+
+.page-about .l-section--page-content-wrap::after {
+    content: "about";
+    right: 0;
+}
+
+.page-contact .l-section--page-content-wrap::after {
+    content: "contact";
+    right: 0;
+}
+
+.page-service .l-section--page-content-wrap::after {
+    content: "service";
+    right: 0;
+}
+
+.l-section--page-content--top-ttl-wrap {
+    text-align: right;
+}
+
+.l-section--page-content--top-ttl-outer {
+    display: inline-block;
+    position: relative;
+}
+
+.l-section--page-content--top-ttl-outer::before,
+.l-section--page-content--top-ttl-outer::after {
+    content: "";
+    position: absolute;
+    background-color: #c5f1f2;
+}
+
+.l-section--page-content--top-ttl-outer::before {
+    top: calc(50% - 1px);
+    left: calc(-50% - 30px);
+    width: 100px;
+    height: 1px;
+}
+
+.l-section--page-content--top-ttl-outer::after {
+    top: calc(100% + 30px);
+    right: 10px;
+    width: 1px;
+    height: 100px;
+}
+
+
+
+/* --- page-service --- */
+
+.page .l-section:nth-child(1) {
+    position: relative;
+    height: 600px;
+    background-image: url(../img/img-section-bg-02.png);
+    background-position: left 0 bottom 0;
+    background-size: 35%;
+    background-repeat: no-repeat;
+}
+
+.page .l-section:nth-child(1)::before,
+.page .l-section:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    background-color: #c5f1f2;
+    animation: backgroundgr 4s infinite;
+}
+
+.page .l-section:nth-child(1)::before {
+    bottom: 220px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: scrollh 4s infinite;
+}
+
+.page .l-section:nth-child(1)::after {
+    bottom: 90px;
+    right: calc(50% - 1px);
+    width: 1px;
+    height: 200px;
+}
+
+.l-section--page-content-wrap {
+    position: relative;
+}
+
+.l-section--page-content--img-wrap {
+    padding: 50px 40px;
+}
+
+.l-section:nth-child(1) .l-section--page-content--ttl {
+    padding-bottom: 120px;
+    @include font-size(40);
+    font-weight: bold;
+    color: #ccc;
+}
+
+.l-section:nth-child(n+2) .l-section--page-content--ttl,
+.l-section--page-content--txt {
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    background-color: #c5f1f2;
+    color: #0B346E;
+}
+
+.l-section:nth-child(n+2) .l-section--page-content--ttl {
+    top: 0;
+    left: 0;
+    @include font-size(40);
+}
+
+.l-section--page-content--txt {
+    width: 400px;
+    right: 0;
+    bottom: 0;
+    @include font-size(20);
+    line-height: 1.6;
+    transform: translate(0%, 50%);
+}
+
+.my-service .l-section--contact--btn-wrap {
+    padding-top: 200px;
+}
+
+@keyframes backgroundgr {
+    0% {
+        background-color: #c5f1f2;
+    }
+    50% {
+        background-color: #93C6E0;
+    }
+    100% {
+        background-color: #c5f1f2;
+    }
+}
+
+@keyframes scrollh {
+    0% {
+        bottom: 220px;
+    }
+    50% {
+        bottom: 90px;
+    }
+    100% {
+        bottom: 220px;
+    }
+}
+
+@keyframes scrollh-sp {
+    0% {
+        bottom: 160px;
+    }
+    50% {
+        bottom: 90px;
+    }
+    100% {
+        bottom: 160px;
+    }
+}
+
+
+/* --- page-about --- */
+
+.l-section--page-content--message {
+    padding: 0 20px;
+}
+
+.l-section--page-content--message:last-child {
+    margin-bottom: 150px;
+}
+
+.l-section--page-content--message:nth-child(1) .l-section--page-content--message-ttl {
+    padding-bottom: 20px;
+    @include font-size(150);
+}
+
+.l-section--page-content--message:nth-child(n+2) .l-section--page-content--message-ttl {
+    position: relative;
+    display: inline-block;
+    padding: 50px 10px 10px 0;
+    margin-bottom: 40px;
+    @include font-size(40);
+    border-bottom: 5px solid #ccc;
+}
+
+.l-section--page-content--message:nth-child(n+2) .l-section--page-content--message-ttl::after {
+    content: "";
+    position: absolute;
+    right: -100%;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.l-section--page-content--message-text {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    @include font-size(20);
+    line-height: 1.6;
+}
+
+.l-section--page-content--message-box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.l-section--page-content--message-box::before,
+.l-section--page-content--message-box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    background-color: #c5f1f2;
+}
+
+.l-section--page-content--message-box::before {
+    transform: rotate(-45deg);
+}
+
+.l-section--page-content--message-box::after {
+    transform: rotate(45deg);
+}
+
+.l-section--page-content--message-text-sub {
+    position: absolute;
+    display: inline-block;
+    @include font-size(40);
+    color: #ccc;
+    font-weight: bold;
+}
+
+.l-section--page-content--message-text-sub:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+
+.l-section--page-content--message-text-sub:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.l-section--page-content--message-text-sub:nth-child(3) {
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -100%);
+}
+
+.l-section--page-content--message-text-sub:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+}
+
+
+.l-section--page-content--message-bg-text .l-section--page-content--message-text::after {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @include font-size(80);
+    font-weight: bold;
+    color: rgba(204, 204, 204, 0.4);
+    transform: translate(0, 50%);
+}
+
+.l-section--page-content--message-bg-text .l-section--page-content--message-text:nth-child(2)::after {
+    content: "past time";
+}
+
+.l-section--page-content--message-bg-text .l-section--page-content--message-text:nth-child(4)::after {
+    content: "current status";
+}
+
+.l-section--page-content--message-bg-text .l-section--page-content--message-text:nth-child(6)::after {
+    content: "future";
+}
+
+.l-section--page-content--message-bg-text .l-section--page-content--message-text:nth-child(8)::after {
+    content: "value";
+}
+
+.l-section--page-content--message-bg-text .l-section--page-content--message-text:nth-child(10)::after {
+    content: "Innovation。";
+}
+
+@media screen and (max-width: 767px) {
+
+/* --- page-service --- */
+
+.l-section--page-content--img-wrap {
+    padding-bottom: 0;
+}
+.l-section:nth-child(n+2) .l-section--page-content--ttl {
+    @include fontVw(40 ,640);
+}
+.l-section--page-content--txt {
+    position: static;
+    width: auto;
+    @include fontVw(20 ,640);
+    transform: translate(0, 0);
+}
+.my-service .l-section:nth-child(n+2) {
+    height: auto;
+}
+.my-service .l-section--contact--btn-wrap {
+    padding-top: 100px;
+}
+
+/* --- page-about --- */
+
+.l-section--page-content--message:nth-child(1) .l-section--page-content--message-ttl {
+    padding-bottom: 20px;
+    @include fontVw(100 ,640);
+}
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+/* --- page-service --- */
+
+.l-section--page-content--top-ttl-outer {
+    width: 150px;
+}
+.l-section--page-content--top-ttl-outer:after {
+    height: 50px;
+}
+.l-section--page-content--top-ttl-outer:before {
+    width: 50px;
+}
+
+.l-section:nth-child(n+2) .l-section--page-content--ttl {
+    top: 20px;
+    @include fontVw(30 ,480);
+}
+.l-section--page-content--txt {
+    position: static;
+    width: auto;
+    @include fontVw(18 ,480);
+    transform: translate(0, 0);
+}
+.my-service .l-section--contact--btn-wrap {
+    padding-top: 40px;
+}
+
+/* --- page-about --- */
+
+.page .l-section:nth-child(1) {
+   height: 300px;
+}
+.l-section:nth-child(1) .l-section--page-content--ttl {
+   @include pbVw(40 ,480);
+   @include fontVw(40 ,480);
+}
+
+.page .l-section:nth-child(1)::after {
+    height: 100px;
+}
+.page .l-section:nth-child(1)::before {
+    bottom: 110px;
+    width: 100px;
+}
+.page .l-section:nth-child(1)::before {
+    animation: scrollh-sp 4s infinite;
+}
+
+.l-section--page-content--message-box {
+    width: 300px;
+    height: 300px;
+}
+
+.l-section--page-content--message:nth-child(n+2) .l-section--page-content--message-ttl {
+    @include fontVw(30 ,480);
+}
+.l-section--page-content--message:nth-child(n+2) .l-section--page-content--message-ttl::after {
+    right: -50%;
+    width: 50%;
+}
+.l-section--page-content--message-text-sub {
+    @include fontVw(30 ,480);
+}
+
+.l-section--page-content--message-text {
+    @include font-size(18);
+}
+
+.l-section--page-content--message-bg-text .l-section--page-content--message-text::after {
+    @include fontVw(40 ,480);
+}
+
+
+}

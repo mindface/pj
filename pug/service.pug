@@ -1,0 +1,49 @@
+include settings/_config
+ - var key = "service"
+ - var page = pages[key]
+
+doctype html
+html(lang="ja")
+ head
+  include settings/_meta
+
+ body
+  include template/_fixednav
+  .wrapper
+   include template/_header
+   #content.content
+    main.main.page.my-service
+     section.l-section.page-service
+      .l-section--page-content-wrap
+       h2.l-section--page-content--ttl サービスについて
+     section#section01.l-section
+      .l-section--page-content--top-ttl-wrap
+       span.l-section--page-content--top-ttl-outer
+        img(src="assets/img/service/img-service-ttl-01.png", alt="coaching").l-section--page-content--top-ttl-img
+      .l-section--page-content-wrap
+        .l-section--page-content--img-wrap
+          img(src="assets/img/service/img-service-01.jpg", alt="導く").l-section--page-content--img
+        h2.l-section--page-content--ttl コーチングとは?
+        p.l-section--page-content--txt どこを目指すのかとどこにいるのかをしっかりと把握することです。<br>ゴール地点とスタート地点を理解していないと道筋は理解できません。<br>目標があっても自分の能力や評価基準、そして自分の努力できる内容でクリアできるレベルについて理解します。<br>そうやって自分の目標を変更しながら目的とする自分のゴールを見つけることです。
+     section#section02.l-section
+      .l-section--page-content--top-ttl-wrap
+       span.l-section--page-content--top-ttl-outer
+        img(src="assets/img/service/img-service-ttl-01.png", alt="coaching").l-section--page-content--top-ttl-img
+      .l-section--page-content-wrap
+        .l-section--page-content--img-wrap
+          img(src="assets/img/service/img-service-01.jpg", alt="導く").l-section--page-content--img
+        h2.l-section--page-content--ttl 情熱は今も胸の内にある
+        p.l-section--page-content--txt モチベーションは誰かにあげてもらうものではありません。<br>自分で目指す目標に向けて尽力していくしかありません。<br>根性論という言葉がありますが、自分で行動する要素であれば使わなければならないケースもあります。<br>ただむやみやたらに行動することが根性論なら不要な場合もあります。
+     section#section03.l-section
+      .l-section--page-content--top-ttl-wrap
+       span.l-section--page-content--top-ttl-outer
+        img(src="assets/img/service/img-service-ttl-01.png", alt="coaching").l-section--page-content--top-ttl-img
+      .l-section--page-content-wrap
+        .l-section--page-content--img-wrap
+          img(src="assets/img/service/img-service-01.jpg", alt="導く").l-section--page-content--img
+        h2.l-section--page-content--ttl 視野を広げる方法
+        p.l-section--page-content--txt 常に同じ視点であることは自分の可能性を潰してしまいます。<br>ではどのような視野が必要なのか?<br>それは自分の体験や他の人からの助言で気がつくしかありません。<br>その手助けができる場合もあるのでその時は相談してみてください。
+      .l-section--contact--btn-wrap
+        a(href="contact.html").l-section--contact--btn 相談してみる →
+
+   include template/_footer

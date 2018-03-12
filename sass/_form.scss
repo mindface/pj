@@ -1,0 +1,119 @@
+/* --- form --- */
+
+/* --- page-contact --- */
+
+.l-section--contact--form-wrap {
+    padding: 50px 20px;
+    max-width: 400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact--list {
+    padding: 20px 0;
+}
+
+.contact-item_label {
+    display: inline-block;
+    padding-bottom: 10px;
+    @include font-size(20);
+    color: #333;
+}
+
+.contact--item input,
+.contact--item textarea {
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 5px;
+    border: 5px solid #c5f1f2;
+    @include font-size(20);
+    display: block;
+    transition: .3s;
+    background-color: #fff;
+}
+
+.contact--item_text {
+    padding: 5px;
+    border-bottom: 5px solid #c5f1f2;
+    @include font-size(20);
+}
+
+.contact--item input::focus {
+    border: 5px solid #ccc;
+}
+
+.contact--item input::-webkit-input-placeholder {
+    color: #ccc;
+}
+.contact--item input:-ms-input-placeholder {
+    color: #ccc;
+}
+.contact--item input::-moz-placeholder {
+    color: #ccc;
+}
+.contact--item input::-placeholder {
+    color: #ccc;
+}
+.contact--item input:placeholder-shown {
+    color: #ccc;
+}
+
+.page-send {
+    text-align: right;
+}
+
+.page-send::before,
+.page-send::after {
+    display: none;
+}
+
+.l-section--send-page-content--ttl {
+    padding-bottom: 70px;
+    @include font-size(40);
+    font-weight: bold;
+    color: #ccc;
+    text-align: left;
+}
+.l-section--send-page-content--text {
+    padding: 10px 0 50px;
+    @include font-size(20);
+    line-height: 1.6;
+}
+
+.l-section--contact--btn-wrap {
+    display: flex;
+    padding-top: 20px;
+}
+
+.l-section--contact--btn-link {
+    display: block;
+}
+
+.l-section--contact--btn {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    @include font-size(20);
+    text-align: center;
+    border: 5px solid #c5f1f2;
+    cursor: pointer;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.l-section--contact--btn-inner:hover {
+    background-color: #c5f1f2;
+    color: #fff;
+}
+
+.l-section--contact--btn:hover {
+    background-color: #c5f1f2;
+    color: #fff;
+}
+
+.contact--item i {
+    padding-right: 10px;
+    color: #c5f1f2;
+}

@@ -1,0 +1,61 @@
+include settings/_config
+ - var key = "contact"
+ - var page = pages[key]
+
+doctype html
+html(lang="ja")
+ head
+  include settings/_meta
+
+ body
+  include template/_fixednav
+  .wrapper
+    include template/_header
+    #content.content
+      main.main.page
+       section.l-section.page-contact
+        .l-section--page-content-wrap
+         h2.l-section--page-content--ttl コンタクトフォーム
+       section.l-section
+        .l-section--contact--form-wrap
+          form(method="post", action="./mail/check.php", id="contact-form")
+           .contact--wrap
+            dl.contact--list
+             dt.contact--item
+              label(for="contact-item-name", class="contact-item_label")
+                i.fas.fa-user
+                | お名前
+             dd.contact--item
+              input(type="text",id="contact-item-name", name="name", value="", maxlengh="30").contact--item_name.required
+            dl.contact--list
+             dt.contact--item
+              label(for="contact-item-tel", class="contact-item_label")
+                i.fas.fa-phone
+                | 電話番号
+             dd.contact--item
+              input(type="tel",id="contact-item-tel", name="tel", value="", maxlengh="10", placeholder="00-0000-0000").contact--item_tel.required
+            dl.contact--list
+             dt.contact--item
+              label(for="contact-item-email", class="contact-item_label")
+                i.far.fa-envelope
+                | メールアドレス
+             dd.contact--item
+              input(type="tel",id="contact-item-email", name="email", value="", maxlengh="70", placeholder="xxx@xxx.com").contact--item_email.required
+            dl.contact--list
+             dt.contact--item
+              label(for="contact-item-title", class="contact-item_label")
+                i.far.fa-edit
+                | 題名
+             dd.contact--item
+              input(type="text",id="contact-item-title", name="title", value="", maxlengh="100").contact--item_title.required
+            dl.contact--list
+             dt.contact--item
+              label(for="contact-item-comment", class="contact-item_label")
+                i.far.fa-comment
+                | 内容
+             dd.contact--item
+              textarea(type="text",id="contact-item-comment", name="comment", value="",row="4" ,cols="40", maxlengh="1000").contact--item_comment.required
+           .l-section--contact--btn-wrap
+             button(type="submit", name="submit", value="send").l-section--contact--btn 確認画面へ
+
+    include template/_footer

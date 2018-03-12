@@ -1,0 +1,51 @@
+
+@mixin heightVw($basesize, $outerWidth){
+    height: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin widthVw($basesize, $outerWidth){
+    width: ($basesize / $outerWidth) * 100 + vw;
+}
+
+
+@mixin font-size($base: 14){
+    font-size: $base + px;
+    font-size: ($base / 10) + rem;
+}
+@mixin fontVw($basesize, $outerWidth){
+    font-size: $basesize + px;
+    font-size: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin ptVw($basesize, $outerWidth){
+    padding-top: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin plVw($basesize, $outerWidth){
+    padding-left: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin prVw($basesize, $outerWidth){
+    padding-right: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin pbVw($basesize, $outerWidth){
+    padding-bottom: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin ptbVw($basesize, $outerWidth){
+    padding: ($basesize / $outerWidth) * 100 + vw 0;
+}
+@mixin plrVw($basesize, $outerWidth){
+    padding: 0 ($basesize / $outerWidth) * 100 + vw 0;
+}
+
+@mixin positiontVw($basesize, $outerWidth){
+    top: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin positionlVw($basesize, $outerWidth){
+    left: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin positionrVw($basesize, $outerWidth){
+    right: ($basesize / $outerWidth) * 100 + vw;
+}
+@mixin positionbVw($basesize, $outerWidth){
+    bottom: ($basesize / $outerWidth) * 100 + vw;
+}
+
+$baseWidth:1280px;
+

@@ -1,0 +1,92 @@
+include settings/_config
+ - var key = "top"
+ - var page = pages[key]
+
+doctype html
+html(lang="ja")
+ head
+  include settings/_meta
+
+ body
+  include template/_fixednav
+  .wrapper
+    include template/_header
+    #content.content
+      .main-img--section
+       .main-img--wrap
+        picture
+         source(media="(max-width: 960px)" srcset="assets/img/img-main-sp.jpg 1x, assets/img/img-main-sp@2x.jpg 2x")
+         source(media="(min-width: 961px)" srcset="assets/img/img-main-pc.png 1x, assets/img/img-main-pc@2x.png 2x")
+         img.main-img(src="assets/img/img-main-sp.jpg")
+       .main-img--text-wrap
+        p.main-img--text coaching
+        p.main-img--text
+         | My life didn’t please me,
+         br
+         | so I created my life.
+        p.main-img--text - コーチングで未来を切り開く -
+      main.main
+       section.l-section.toppage-section
+        .l-section--content-wrap
+         .l-section--content--img-wrap
+           img.l-section--content--img(src="assets/img/img-section-01.png", alt="Let's learn about coaching!")
+           p#mv01.l-section--content--img-text.transf
+            | Let's
+            br
+            |learn
+            br
+            |about
+            br
+            |coaching!
+         .l-section--content--text-wrap
+          .l-section--content--info-wrap
+           h2.l-section--content--info-ttl コーチングとは?
+            span.l-section--content--info-ttlsub 飛躍は毎日の積み重ねから。
+           .l-section--content--btn-wrap
+            .l-section--content--btn
+              a#action01.l-section--content--btn-link(href="./service.html#section01") Go page
+               p.l-section--btn-arrow
+                 span
+       section.l-section.toppage-section
+        .l-section--content-wrap
+         .l-section--content--text-wrap
+          .l-section--content--info-wrap
+           h2.l-section--content--info-ttl 情熱は今も胸の内にある
+            span.l-section--content--info-ttlsub モチベーションは脳と<br class="for-sp">ドーパミンの関係から。
+           .l-section--content--btn-wrap
+            .l-section--content--btn
+              a#action02.l-section--content--btn-link(href="./service.html#section02") Go page
+               p.l-section--btn-arrow
+                 span
+         .l-section--content--img-wrap
+           img.l-section--content--img(src="assets/img/img-section-02.png", alt="Let's learn about coaching!")
+           p#mv02.l-section--content--img-text.transf
+            | Let's
+            br
+            |learn
+            br
+            |about
+            br
+            |coaching!
+       section.l-section.toppage-section
+        .l-section--content-wrap
+         .l-section--content--img-wrap
+           img.l-section--content--img(src="assets/img/img-section-03.png", alt="Let's learn about coaching!")
+           p#mv03.l-section--content--img-text.transf
+            | Let's
+            br
+            |learn
+            br
+            |about
+            br
+            |coaching!
+         .l-section--content--text-wrap
+          .l-section--content--info-wrap
+           h2.l-section--content--info-ttl 視野を広げる方法
+            span.l-section--content--info-ttlsub 認知的なバイアスから逃れるのではなく利用する。
+           .l-section--content--btn-wrap
+            .l-section--content--btn
+              a#action03.l-section--content--btn-link(href="./service.html#section03") Go page
+               p.l-section--btn-arrow
+                 span
+  include template/_footer

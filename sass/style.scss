@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import "_sassfunction";
+
+/* --- all --- */
+
+html,
+body {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: YuGothicM;
+    src: local("Yu Gothic Medium");
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-feature-settings: palt;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+img {
+    max-width: 100%;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+
+.wrapper{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    background-color: #fff;
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+@import "_header.scss";
+@import "_nav.scss";
+@import "_main.scss";
+@import "_page.scss";
+@import "_form.scss";
+@import "_footer.scss";
+@import "_rwd.scss";
+
+
+/* --- JS --- */
+
+.content {
+position: relative;
+}
+
+.fadeIn {
+    width: 0;
+    left: -100%;
+}
+
+.fede-set {
+opacity: 0;
+transform: translate3d(-20px, 0, 0);
+}
+
+.mv {
+transition-duration: 1s;
+color: #ff0;
+animation: mv 1s ease-in;
+transform: rotate(20deg)
+}
+
+.pageOut::before {
+animation: cl 0.8s both;
+animation-direction: .5s;
+}
+.pageOut::after {
+animation: cr 0.8s both;
+animation-direction: .5s;
+}
+
+@keyframes cl {
+0% { left: -20px; }
+50% { left: 50%; width: 20px; height: 20px;}
+100% { left: 50%; width: 400px; height: 400px; }
+}
+@keyframes cr {
+0% { right: -20px; }
+50% { right: 50%; width: 20px; height: 20px; }
+100% { right: 50%; width: 400px; height: 400px; }
+}
+
+@keyframes mv {
+0% {transform: scale(1) rotate(-20deg);}
+50%{transform: scale(1.05);}
+100% {transform: scale(1) rotate(20deg);}
+}
+
+
+/* --- UI --- */
+
+.btn {
+    display: inline-block;
+    padding: 15px 15px 15px 15px;
+    background-color: #fcee21;
+}
+

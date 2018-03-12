@@ -1,0 +1,43 @@
+include settings/_config
+ - var key = "about"
+ - var page = pages[key]
+ - var about
+
+doctype html
+html(lang="ja")
+ head
+  include settings/_meta
+
+ body
+  include template/_fixednav
+  .wrapper
+    include template/_header
+    #content.content
+      main.main.page
+       section.l-section.page-about
+        .l-section--page-content-wrap
+         h2.l-section--page-content--ttl 私たちについて
+       section.l-section
+        .l-section--page-content-wrap
+         .l-section--page-content-inner
+          .l-section--page-content--message
+            h3.l-section--page-content--message-ttl 今。
+            p.l-section--page-content--message-text 過去どうだったのかも、これからどうなりたいのかも様々な願望があります。<br>でも変えることができるのは今だけです。<br>タイムマシンができれば可能かもしれませんができるのは今何をするのか、なのです。
+          .l-section--page-content--message-box
+            span.l-section--page-content--message-text-sub 過去
+            span.l-section--page-content--message-text-sub 現状
+            span.l-section--page-content--message-text-sub 未来
+            span.l-section--page-content--message-text-sub 価値
+          .l-section--page-content--message.l-section--page-content--message-bg-text
+            h3.l-section--page-content--message-ttl 過去
+            p.l-section--page-content--message-text 自分の知識でもあり、何をしてきたのかではありますが変えることはできません。<br>自分で変えたい過去があるならそれは今の自分にどうやって活かすのか考えることが必要です。
+            h3.l-section--page-content--message-ttl 現状
+            p.l-section--page-content--message-text 現状の自分を的確に把握することが必要です。時には自分さえも疑うことが必要です。<br>自分が認識していることは、誰かから聞いたことなのか。<br>それとも事実を確認したことなのか。<br>自分が解釈したことは分けることができます。<br>事実を解釈したことか予測したことを事実としているのかは、厳密には確認すること必要でしょう。
+            h3.l-section--page-content--message-ttl 未来
+            p.l-section--page-content--message-text 計画したことをどのように実行し調整して獲得したい未来にするのか私たちは大切にしています。
+            h3.l-section--page-content--message-ttl 価値
+            p.l-section--page-content--message-text 自分たちの利益だけが価値ではありません。<br>お客様が価値のあるサービスと考えることができ、喜んでもらえることで[win-win]になることが本当の価値だと考えます。
+            h3.l-section--page-content--message-ttl Innovation。
+            p.l-section--page-content--message-text Innovationというのは言葉。<br>「新しい活用法」などと訳される言葉ですが、それ自身はただの言葉でしかありません。<br>もし大きく自分自身を変えたいのなら日々の連続でしか自らを変えることができないのです。<br>それはコーチングも同じで、コーチングという方法を利用してどうやって目的を達成するのかという点がポイントだと私たちは考えています。
+
+  include template/_footer
